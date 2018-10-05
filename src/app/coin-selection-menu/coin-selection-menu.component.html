@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let coin of coins">
+      <a class="nav-link active" href="{{coin}}">{{coin}}</a>
+    </li>
+    <app-coin-selection-menu-data></app-coin-selection-menu-data>
+  </ul>
+</div>
