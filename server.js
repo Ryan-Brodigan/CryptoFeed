@@ -1,9 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require("http");
-const https = require("https");
 const cors = require('cors');
-const path = require('path');
 const app = express();
 
 /**
@@ -14,23 +12,24 @@ let corsOptions = {
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
+/**
+ * Use CORS middleware
+ */
 app.use(cors(corsOptions));
 
-// Get our API routes
+/**
+ * Get our API routes
+ */
 const api = require('./server/routes/api');
 
-// Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// Set our api routes
+/**
+ * Set our api routes
+ */
 app.use('/api', api);
 
-// Catch all other routes and return the index file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/CryptoFeed/index.html'));
-});
-
-// Parsers for POST data
+/**
+ * Parser middleware for POST data
+ */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
