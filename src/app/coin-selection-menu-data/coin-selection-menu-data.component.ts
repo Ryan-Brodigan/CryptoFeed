@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coin-selection-menu-data.component.css']
 })
 export class CoinSelectionMenuDataComponent implements OnInit {
-  BTCExchangeRate = 1.0;
+  JPYExchangeRate = 1.0;
   USDExchangeRate = 5.0;
   EURExchangeRate = 7.0;
 
