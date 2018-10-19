@@ -14,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'home', component: ProfileMenuComponent},
   { path: 'data', component: CoinSelectionMenuComponent },
   { path: 'news', component: NewsMenuComponent},
+  { path: '', redirectTo: 'data', pathMatch: 'full'}
 ];
 
 @NgModule({
