@@ -9,8 +9,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CoinSelectionMenuComponent implements OnInit {
   coins: String[];
+  selectedCoin = 'BTC';
 
   constructor(private http: HttpClient) {
+  }
+
+  ngOnInit() {
     this.http
       .get<String[]>('src/app/data/coins.json')
       .pipe(
@@ -18,7 +22,7 @@ export class CoinSelectionMenuComponent implements OnInit {
       ).subscribe(coins => this.coins = coins);
   }
 
-  ngOnInit() {
+  onCoinSelect(coin: string) {
+    this.selectedCoin = coin;
   }
-
 }
