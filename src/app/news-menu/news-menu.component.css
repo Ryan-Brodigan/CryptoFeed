@@ -1,0 +1,18 @@
+#itemImage {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  width: 60%;
+  height: 5%;
+}
+
+#YourFeed {
+  padding-left: 40px;
+}
+
+#feed {
+  padding-left: 25%;
+}

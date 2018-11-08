@@ -1,0 +1,20 @@
+[
+  {
+    "image": "../assets/images/BTC.png",
+    "title": "Good times for Bitcoin",
+    "excerpt": "It's a good time to be a Bitcoin owner...",
+    "link": "https://www.newsbtc.com/2018/06/13/positive-bitcoin-price-momentum-in-late-2018-is-still-very-much-possible/"
+  },
+  {
+    "image": "../assets/images/ETH.png",
+    "title": "Bad times for Ethereum",
+    "excerpt": "If you own any Ethereum you might wanna sell soon...",
+    "link": "https://www.newsbtc.com/2018/09/04/ethereum-eth-price-analysis-ethereum-futures/"
+  },
+  {
+    "image": "../assets/images/DOGE.png",
+    "title": "The Doge sensation",
+    "excerpt": "Much money, very wow...",
+    "link": "https://hackernoon.com/dogecoin-very-wow-much-cycle-7b1d396ccec7"
+  }
+]

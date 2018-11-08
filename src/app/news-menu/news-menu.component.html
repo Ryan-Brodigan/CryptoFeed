@@ -1,3 +1,18 @@
-<p>
-  news-menu works!
-</p>
+<div id="feed">
+  <h1 id="YourFeed">
+    Your Feed:
+  </h1>
+  <ul>
+   <div class="card" *ngFor="let feedItem of feedItems">
+     <a href="{{feedItem.link}}">
+       <div id="itemImage">
+         <img src="{{feedItem.image}}" width="100px" height="100px">
+       </div>
+       <div id="itemContent">
+         <h2>{{feedItem.title}}</h2>
+         <p>{{feedItem.excerpt}}</p>
+       </div>
+     </a>
+   </div>
+  </ul>
+</div>
