@@ -1,0 +1,27 @@
+#container {
+  width:100%;
+  text-align:center;
+}
+
+#left {
+  float:left;
+  width:100px;
+  height: 20px;
+}
+
+#center {
+  display: inline-block;
+  margin:0 auto;
+  width:50px;
+  height: 20px;
+}
+
+#right {
+  float:right;
+  height: 20px;
+}
+
+#menu {
+  float: left;
+  margin-right: 10px;
+}

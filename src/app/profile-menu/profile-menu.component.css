@@ -1,0 +1,42 @@
+#container {
+  width:100%;
+  text-align:center;
+}
+
+#left {
+  float:left;
+  width:100px;
+  height: 20px;
+}
+
+#center {
+  display: inline-block;
+  margin:0 auto;
+  width:50px;
+  height: 20px;
+}
+
+#right {
+  float:right;
+  height: 20px;
+}
+
+#YourFeed {
+  padding-left: 40px;
+}
+
+#itemImage {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+#feedCard {
+  width: 60%;
+  height: 5%;
+}
+
+#coins {
+  float: left;
+  margin-right: 5%;
+}

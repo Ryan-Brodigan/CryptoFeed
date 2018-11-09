@@ -1,3 +1,48 @@
-<p>
-  profile-menu works!
-</p>
+<h1>
+  Hello, {{username}}
+</h1>
+<br>
+<div id="coins">
+  <h2>
+    Your Coins at a glance:
+  </h2>
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item container" *ngFor="let coin of coins">
+        <div id="left">
+          {{coin.name}}
+        </div>
+        <div id="center">
+          <img width="25px" height="25px" src="../../assets/images/greenarrow.png" *ngIf="coin.valueRate > 0.0">
+          <img width="25px" height="25px" src="../../assets/images/redarrow.png" *ngIf="coin.valueRate < 0.0">
+          <p>{{coin.valueRate}}%</p>
+        </div>
+        <div id="right">
+          <img width="50px" height="50px" src="../../assets/images/HappySentiment.png" *ngIf="coin.sentiment == 'positive'">
+          <img width="50px" height="50px" src="../../assets/images/NegativeSentiment.png" *ngIf="coin.sentiment == 'negative'">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="topStories">
+  <h2 id="YourFeed">
+    Top Stories:
+  </h2>
+  <div id="feed">
+    <ul>
+      <div class="card" id="feedCard" *ngFor="let feedItem of feedItems">
+        <a href="{{feedItem.link}}">
+          <div id="itemImage">
+            <img src="{{feedItem.image}}" width="100px" height="100px">
+          </div>
+          <div id="itemContent">
+            <h2>{{feedItem.title}}</h2>
+            <p>{{feedItem.excerpt}}</p>
+          </div>
+        </a>
+      </div>
+    </ul>
+  </div>
+</div>
+

@@ -1,8 +1,24 @@
-<div class="card" style="width: 18rem;">
+<div class="card" id="menu" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item" *ngFor="let coin of coins">
-      <button (click)="onCoinSelect(coin)" class="nav-link active">{{coin}}</button>
+    <li class="list-group-item container" *ngFor="let coin of coins">
+      <div id="left">
+        <button (click)="onCoinSelect(coin.name)" class="nav-link active">{{coin.name}}</button>
+      </div>
+      <div id="center">
+        <img width="25px" height="25px" src="../../assets/images/greenarrow.png" *ngIf="coin.valueRate > 0.0">
+        <img width="25px" height="25px" src="../../assets/images/redarrow.png" *ngIf="coin.valueRate < 0.0">
+        <p>{{coin.valueRate}}%</p>
+      </div>
+      <div id="right">
+        <img width="50px" height="50px" src="../../assets/images/HappySentiment.png" *ngIf="coin.sentiment == 'positive'">
+        <img width="50px" height="50px" src="../../assets/images/NegativeSentiment.png" *ngIf="coin.sentiment == 'negative'">
+      </div>
     </li>
     <app-coin-selection-menu-data [selectedCoin]="selectedCoin"></app-coin-selection-menu-data>
   </ul>
+</div>
+<div id="graph">
+  <img width="1000px" height="450px" *ngIf="selectedCoin == 'BTC'" src="../../assets/images/LineGraph5.PNG">
+  <img width="1000px" height="450px" *ngIf="selectedCoin == 'ETH'" src="../../assets/images/LineGraph4.PNG">
+  <img width="1000px" height="450px" *ngIf="selectedCoin == 'DOGE'" src="../../assets/images/LineGraph1.PNG">
 </div>

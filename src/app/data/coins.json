@@ -1,11 +1,17 @@
 [
   {
-   "name": "BTC"
+   "name": "BTC",
+   "valueRate": -0.8,
+   "sentiment": "positive"
   },
   {
-    "name": "ETH"
+    "name": "ETH",
+    "valueRate": 1.2,
+    "sentiment": "negative"
   },
   {
-    "name": "DOGE"
+    "name": "DOGE",
+    "valueRate": 20.2,
+    "sentiment": "positive"
   }
 ]
